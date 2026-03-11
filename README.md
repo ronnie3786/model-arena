@@ -22,9 +22,7 @@ Each test in this repo gives frontier AI models an identical coding challenge an
 | 8 | GLM-5 | 30/40 | 7/11 | $0.65 |
 | 9 | Gemini 3.1 Pro | 29/40 | — | $1.50 |
 
-**Play them:** [arena.ronnierocha.dev](https://arena.ronnierocha.dev)
-
-**Full writeup:** [ronnierocha.dev/blog](https://ronnierocha.dev/blog/ai-model-arena-game-hub/)
+**Full writeup:** [ronnierocha.dev/blog/ai-model-arena-game-hub](https://ronnierocha.dev/blog/ai-model-arena-game-hub/)
 
 ## Structure
 
