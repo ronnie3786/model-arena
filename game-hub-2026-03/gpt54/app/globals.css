@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.14), transparent 28%),
+    #050816;
+}
+
+body {
+  min-height: 100vh;
+  color: #f3f6fb;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+button,
+a {
+  transition: all 180ms ease;
+}
+
+.panel {
+  @apply rounded-3xl border border-white/10 bg-panel/80 backdrop-blur-xl;
+}
+
+.panel-alt {
+  @apply rounded-3xl border border-white/10 bg-panelAlt/80 backdrop-blur-xl;
+}
+
+.accent-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}

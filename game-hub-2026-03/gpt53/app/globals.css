@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 10%, #1c2b5a 0%, #0b1020 45%, #060912 100%);
+  color: #e5efff;
+  font-family: Avenir, "Segoe UI", sans-serif;
+}
+
+.card-glow {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.card-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+.piece-fade {
+  animation: pieceFade 240ms ease;
+}
+
+@keyframes pieceFade {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.draw-line {
+  position: absolute;
+  height: 6px;
+  border-radius: 999px;
+  background: #38f4b8;
+  transform-origin: left center;
+  animation: lineGrow 360ms ease forwards;
+}
+
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

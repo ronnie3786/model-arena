@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "openrouter": {
+      "models": {
+        "openai/gpt-5.3-codex": { "name": "GPT-5.3 Codex", "type": "chat" },
+        "moonshotai/kimi-k2.5-thinking": { "name": "Kimi K2.5 Thinking", "type": "chat" },
+        "deepseek/deepseek-v3.2-exp": { "name": "DeepSeek V3.2 Exp", "type": "chat" },
+        "qwen/qwen3.5-397b-a17b": { "name": "Qwen3.5 397B A17B", "type": "chat" },
+        "openai/gpt-5.4": { "name": "GPT-5.4", "type": "chat" }
+      }
+    }
+  }
+}

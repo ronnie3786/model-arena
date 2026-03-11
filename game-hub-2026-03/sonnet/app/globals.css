@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #f0f0f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+/* SVG win line */
+.win-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawLine 0.5s ease-out 0.1s forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Card hover shimmer */
+.card-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* RPS choice flip */
+.perspective {
+  perspective: 600px;
+}
+
+/* Fade transition */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+/* TTT grid lines */
+.ttt-cell {
+  transition: background-color 0.15s ease;
+}
+.ttt-cell:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* RPS button active */
+.rps-choice {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.rps-choice:hover:not(:disabled) {
+  transform: translateY(-4px);
+}
+.rps-choice:active:not(:disabled) {
+  transform: translateY(0px) scale(0.97);
+}
+
+/* Connection dot */
+@keyframes pulse2 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.conn-dot {
+  animation: pulse2 1.5s ease-in-out infinite;
+}
+
+/* Score badge */
+.score-badge {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  backdrop-filter: blur(4px);
+}
+
+/* Piece fade in */
+@keyframes pieceFadeIn {
+  0% { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+  70% { transform: scale(1.1) rotate(3deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+.piece-appear {
+  animation: pieceFadeIn 0.25s ease-out forwards;
+}
+
+/* Win pop */
+@keyframes winPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.win-pop {
+  animation: winPop 0.5s ease-out forwards;
+}
+
+/* Countdown */
+@keyframes countdownAnim {
+  0% { opacity: 0; transform: scale(2); }
+  20% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+.countdown-num {
+  animation: countdownAnim 0.9s ease-out forwards;
+}
+
+/* RPS reveal flip */
+@keyframes flipReveal {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+}
+.flip-reveal {
+  animation: flipReveal 0.4s ease-in-out forwards;
+}
+
+/* Slide in */
+@keyframes slideInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.slide-in-up {
+  animation: slideInUp 0.4s ease-out forwards;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
