@@ -36,7 +36,8 @@ model-arena/
 │   ├── gpt53/            # GPT-5.3 Codex
 │   ├── minimax/          # MiniMax M2.5
 │   ├── qwen/             # Qwen 3.5 397B A17B
-│   └── glm/              # GLM-5
+│   ├── glm/              # GLM-5
+│   └── gemini/           # Gemini 3.1 Pro
 ├── [future-test]/        # Next arena test
 └── README.md
 ```
